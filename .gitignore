@@ -1,0 +1,5 @@
+.*.sw*
+alert
+*.tar.gz
+watch
+smtp.json

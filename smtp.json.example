@@ -1,0 +1,8 @@
+{
+    "From": "EMAIL@gmail.com",
+    "To": ["USER1@wherever.org", "USER2@elsewhere.net"],
+    "SMTPServer": "smtp.gmail.com",
+    "SMTPPort": 587,
+    "Username": "EMAIL",
+    "Password": "ohjeezthispasswordisincleartext"
+}

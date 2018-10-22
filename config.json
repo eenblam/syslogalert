@@ -1,0 +1,45 @@
+{
+  "MessageBufferWaitSeconds": 10,
+  "Policy": [
+    {
+      "Host": "pfSense",
+      "Tag": "sshd",
+      "Content": "Connection closed .*",
+      "Description": "connection closed on pfSense pfSense|sshd|Connection closed",
+      "Description": "pfSense|sshd|Connection closed",
+      "Regex": true
+    },
+    {
+      "Tag": "sshd",
+      "Content": "Connection closed .*",
+      "Description": "*|sshd|Connection closed",
+      "Regex": true
+    },
+    {
+      "Host": "pfSense",
+      "Content": "Connection closed .*",
+      "Description": "pfSense|*|Connection closed",
+      "Regex": true
+    },
+    {
+      "Content": "Connection closed .*",
+      "Description": "*|*|Connection closed",
+      "Regex": true
+    },
+    {
+      "Tag": "sshd",
+      "Content": "error: PAM: authentication error",
+      "Description": "PAM failure on any host",
+      "Regex": true
+    },
+    {
+      "Host": "pfSense",
+      "Content": "authentication error",
+      "Description": "Authentication error on pfSense (HTTP or SSH)",
+      "Regex": true
+    },
+    {
+      "Description": "Empty rule"
+    }
+  ]
+}
