@@ -20,9 +20,8 @@ func NewBufferedMailer(timeout time.Duration, mailer SendMailer) *BufferedMailer
 	return &BufferedMailer{
 		MessageChan: make(chan Message),
 		Buffer:      []Message{},
-		//Timeout: timeout,
-		Timeout: 10,
-		Mailer:  mailer,
+		Timeout:     10,
+		Mailer:      mailer,
 	}
 }
 
@@ -44,7 +43,6 @@ func (b *BufferedMailer) Start() {
 				b.Mailer.SendMail(header, joined)
 				log.Printf("ALERTING: %s %d messages", header, len(b.Buffer))
 				break BufferLoop
-				//default:
 			}
 		}
 		// Flush buffer
