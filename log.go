@@ -24,6 +24,7 @@ type Log struct {
 func ParseLog(line string) (*Log, error) {
 	buff := []byte(line)
 	p := rfc3164.NewParser(buff)
+	p.ParsePriority = false
 	err := p.Parse()
 	if err != nil {
 		return nil, fmt.Errorf("Couldn't read line: %s", err)
