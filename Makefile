@@ -1,4 +1,4 @@
-all: fmt build package push
+all: fmt build package
 
 fmt:
 	gofmt -w *.go cmd/*.go
