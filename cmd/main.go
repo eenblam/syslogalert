@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	sa "github.com/eenblam/syslog-alert"
+	sa "github.com/eenblam/syslogalert"
 	"github.com/papertrail/go-tail/follower"
 )
 
